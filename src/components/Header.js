@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-scroll';
-
 import styled from 'styled-components';
+import themeList from '../data/themeList';
+
 import Logo from './Logo';
 import ThemeSwitcher from './ThemeSwitcher';
 
@@ -13,7 +14,8 @@ const HeaderStyles = styled.header`
   right: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--lightBlue_1);
+  background-color: ${({ theme: { theme } }) =>
+    theme === themeList.light ? 'var(--lightBlue_1)' : 'var(--darkBlue_3)'};
   border-bottom: 1px solid var(--mediumSlateBlue);
 
   .navigation {
@@ -31,7 +33,8 @@ const HeaderStyles = styled.header`
       font-weight: 500;
       display: inline-block;
       padding: 0.5rem 1rem;
-      color: var(--darkBlue_2);
+      color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
     }
     &:hover {
       a {
@@ -54,7 +57,8 @@ const HeaderStyles = styled.header`
     transition: all 0.3s ease;
 
     svg {
-      color: var(--darkBlue_1);
+      color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? 'var(--darkBlue_2)' : 'var(--lightBlue_1)'};
     }
     &:hover {
       background-color: #8080803b;
@@ -76,7 +80,8 @@ const HeaderStyles = styled.header`
       max-width: 250px;
       top: 0;
       right: 0;
-      background-color: var(--lightBlue_2);
+      background-color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? 'var(--lightBlue_2)' : 'var(--darkBlue_4)'};
       z-index: 100;
       transform: translateX(100%);
       transition: transform 0.3s ease;
