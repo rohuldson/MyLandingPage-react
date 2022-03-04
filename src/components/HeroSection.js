@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import HeroTitle from './titles/HeroTitle';
 import ParagraphText from './paragraphTexts/ParagraphText';
 import PrimaryButton from './buttons/PrimaryButton';
-import HeroImg from '../assets/images/hero.png';
+import HeroImg from '../assets/images/hero2.png';
 
 const HeroSectionStyles = styled.div`
   padding-top: calc(var(--header-height) + 10px);
