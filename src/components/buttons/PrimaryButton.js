@@ -20,8 +20,12 @@ const ButtonStyles = styled.a`
   }
 `;
 
-function PrimaryButton({ children, ...rest }) {
-  return <ButtonStyles {...rest}>{children}</ButtonStyles>;
+function PrimaryButton({ children, buttonType, ...rest }) {
+  return (
+    <ButtonStyles as={buttonType} {...rest}>
+      {children}
+    </ButtonStyles>
+  );
 }
 
 export default PrimaryButton;

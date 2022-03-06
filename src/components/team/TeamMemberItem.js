@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import themeList from '../../data/themeList';
 import ParagraphText from '../paragraphTexts/ParagraphText';
-import SectionTitle from '../titles/SectionTitle';
 
 const TeamMemberStyles = styled.div`
   .teamMember__img {
