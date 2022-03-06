@@ -46,10 +46,12 @@ const SectionItemStyles = styled.div`
   }
   @media only screen and (max-width: 768px) {
     background-color: var(--mediumSlateBlue);
+
     .service__icon {
       background-color: var(--lightBlue_1);
       color: var(--mediumSlateBlue);
     }
+
     .service__title {
       color: var(--lightBlue_1);
       font-size: 1.8rem;
