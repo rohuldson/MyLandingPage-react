@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll/modules';
 import styled from 'styled-components';
 /* import themeList from '../../data/themeList'; */
 import AboutImg from '../assets/images/about.png';
@@ -56,7 +57,9 @@ function AboutSection() {
               'this company' is a studio of some passionate photographer. Our
               goal is to capture your experience.
             </ParagraphText>
-            <PrimaryButton>Get In Touch</PrimaryButton>
+            <PrimaryButton buttonType={Link} to="contact">
+              Get In Touch
+            </PrimaryButton>
           </div>
         </div>
       </div>

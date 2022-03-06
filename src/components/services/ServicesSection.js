@@ -26,7 +26,7 @@ const ServicesSectionStyles = styled.div`
 
 function ServicesSection() {
   return (
-    <ServicesSectionStyles>
+    <ServicesSectionStyles id="services">
       <div className="container">
         <SectionTitle className="service__title">Services for you</SectionTitle>
         <div className="services__items">

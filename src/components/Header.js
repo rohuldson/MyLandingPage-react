@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-scroll';
+
 import styled from 'styled-components';
 import themeList from '../data/themeList';
 
@@ -120,7 +121,9 @@ function Header() {
     <HeaderStyles>
       <div className="container">
         <div className="navigation">
-          <Logo />
+          <Link to="hero" smooth>
+            <Logo />
+          </Link>
           <div className="navMenu">
             <nav className={isMobile && isNavOpen ? 'open' : undefined}>
               {isMobile && (
@@ -136,16 +139,24 @@ function Header() {
               )}
               <ul>
                 <li>
-                  <Link to="home">Home </Link>
+                  <Link to="hero" smooth>
+                    Home{' '}
+                  </Link>
                 </li>
                 <li>
-                  <Link to="home">Services </Link>
+                  <Link to="services" smooth>
+                    Services{' '}
+                  </Link>
                 </li>
                 <li>
-                  <Link to="home">About </Link>
+                  <Link to="about" smooth>
+                    About{' '}
+                  </Link>
                 </li>
                 <li>
-                  <Link to="home">Contact </Link>
+                  <Link to="contact" smooth>
+                    Contact{' '}
+                  </Link>
                 </li>
               </ul>
             </nav>

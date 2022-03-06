@@ -10,9 +10,9 @@ const LogoStyles = styled.div`
   }
 `;
 
-function Logo() {
+function Logo({ ...rest }) {
   return (
-    <LogoStyles>
+    <LogoStyles {...rest}>
       <svg
         width="71"
         height="19"

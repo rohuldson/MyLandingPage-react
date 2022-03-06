@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-scroll/modules';
 import HeroTitle from './titles/HeroTitle';
 import ParagraphText from './paragraphTexts/ParagraphText';
 import PrimaryButton from './buttons/PrimaryButton';
@@ -70,7 +71,9 @@ function HeroSection() {
             <ParagraphText className="hero__description">
               Because everyone has a story to tell, let me help you tell yours.
             </ParagraphText>
-            <PrimaryButton>Get in Touch</PrimaryButton>
+            <PrimaryButton buttonType={Link} to="contact" smooth>
+              Get in Touch
+            </PrimaryButton>
           </div>
           <div className="hero__img">
             <img src={HeroImg} alt="my hero section" />
